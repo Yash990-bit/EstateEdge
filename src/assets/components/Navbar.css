@@ -128,3 +128,23 @@
     }
   }
   
+  body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  .theme-toggle {
+    margin-left: 1rem;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #1a4ed8;
+    color: #1a4ed8;
+    border-radius: 5px;
+  }
+  

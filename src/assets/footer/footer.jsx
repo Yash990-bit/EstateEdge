@@ -1,7 +1,5 @@
 import React from "react";
 import "./footer.css";
-// import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-// import { PiXLogoFill } from "react-icons/pi";
 
 const Footer = () => {
   return (
