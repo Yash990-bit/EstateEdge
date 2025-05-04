@@ -23,7 +23,7 @@ const Navbar = () => {
           <a href="/auctions">Auctions</a>
           <a href="/sell">Sell Property</a>
           <a href="/about">About Us</a>
-          <a href="/contact">Contact</a>
+          <a href="www.linkedin.com/in/yash-raghubanshi-ba9ba630b">Contact</a>
 
           <div className="search-bar">
             <i className="fas fa-search"></i>
