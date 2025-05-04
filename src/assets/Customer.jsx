@@ -3,7 +3,7 @@ import Chaitanya from "../assets/images/Chaitanya.png";
 import Rudraksh from "../assets/images/Rudraksh.png";
 import Shaurya from "../assets/images/Shaurya.png";
 import Anshuman from "../assets/images/Anshuman.png";
-
+import Mayank from "../assets/images/Mayank.png";
 import "../App.css";
 
 function Customer() {
@@ -21,7 +21,7 @@ function Customer() {
       scrollContainer.scrollLeft = scrollAmount;
 
       if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-        scrollAmount = 0; // Reset when halfway scrolled
+        scrollAmount = 0; 
       }
 
       requestAnimationFrame(scroll);
@@ -53,17 +53,22 @@ function Customer() {
             <div className="testimonial-card">
               <img src={Rudraksh} alt="rudraksh" />
               <p>"I came to know about Auction House..."</p>
-              <h4>Satya Yadav</h4>
+              <h4>Rudraksh Sharma</h4>
             </div>
             <div className="testimonial-card">
               <img src={Shaurya} alt="shaurya" />
               <p>"I could schedule viewings..."</p>
-              <h4>Emily T.</h4>
+              <h4>Shaurya Sharma</h4>
             </div>
             <div className="testimonial-card">
               <img src={Anshuman} alt="anshuman" />
               <p>"Great platform!..."</p>
-              <h4>Ravi K.</h4>
+              <h4>Anshuman Mehta</h4>
+            </div>
+            <div className="testimonial-card">
+              <img src={Mayank} alt="mayank" />
+              <p>"Great platform!..."</p>
+              <h4>Mayank Sharma</h4>
             </div>
           </div>
         </div>

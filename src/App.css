@@ -1,4 +1,4 @@
-/* === Global Reset === */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,6 @@ body {
   color: #000;
 }
 
-/* === Banner Section === */
 .banner-container {
   position: relative;
   width: 100%;
@@ -54,7 +53,6 @@ body {
   color: #0044ff;
 }
 
-/* === Search Box === */
 .search-box {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +85,6 @@ body {
   background-color: #45a049;
 }
 
-/* === Popular Links === */
 .popular-links {
   display: flex;
   flex-wrap: wrap;
@@ -101,6 +98,7 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  color:#000000;
 }
 
 .popular-links a {
@@ -115,7 +113,6 @@ body {
   background: #7db3da;
 }
 
-/* === Sections === */
 .off,
 .become-section,
 .globe-section {
@@ -148,7 +145,7 @@ body {
 .off-text h2,
 .become h2,
 .global h2 {
-  font-size: 2rem;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
@@ -175,10 +172,10 @@ body {
 }
 
 .globe-image {
-  margin-left: 0; /* Removed fixed margin that caused overflow */
+  margin-left: 0; 
 }
 
-/* === Image Sections === */
+
 .Image-section,
 .Img-section {
   display: flex;
@@ -201,7 +198,6 @@ body {
   transform: scale(1.1);
 }
 
-/* === Headings === */
 .head {
   text-align: center;
   margin: 20px 0;
@@ -216,7 +212,6 @@ body {
   color: #0044ff;
 }
 
-/* === Testimonials === */
 .Customer-section {
   text-align: center;
   padding: 60px 20px;
@@ -242,6 +237,11 @@ body {
   padding: 20px 0;
   scroll-behavior: smooth;
   scrollbar-width: none;
+}
+
+.testimonial-carousel:hover {
+  scrollbar-width: thin;
+  cursor: pointer;
 }
 
 .testimonial-carousel::-webkit-scrollbar {
@@ -279,7 +279,6 @@ body {
   color: #333;
 }
 
-/* === Responsive Fixes === */
 @media (max-width: 768px) {
   .off,
   .become-section,

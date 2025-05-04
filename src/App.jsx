@@ -14,6 +14,7 @@ import brook from './assets/images/brook.png';
 import cpg from './assets/images/cpg.png';
 import Customer from './assets/Customer';
 import './App.css';
+import Footer from './assets/footer/footer';
 
 function App() {
   return (
@@ -104,7 +105,8 @@ function App() {
         <img src={cpg} alt="CPG" />
       </div>
 
-      <Customer />
+      <Customer/>
+      <Footer/>
     </>
   );
 }
