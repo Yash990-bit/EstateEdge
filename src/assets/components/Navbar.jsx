@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
 
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <a href="/">Home</a>
+          {/* <Link to="/auctions">Auctions</Link> */}
           <a href="/auctions">Auctions</a>
           <a href="/sell">Sell Property</a>
           <a href="/about">About Us</a>
