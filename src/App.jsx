@@ -25,22 +25,9 @@ function App() {
         <img src={banner} alt="Auction Banner" className="banner-img" />
         <div className="banner-overlay">
           <h1 className="banner-heading">Your Trusted Partner <span>In Growth</span></h1>
-          <div className="search-box">
-            <input type="text" placeholder="Neighborhood, City or State" />
-            <select>
-              <option>All Category</option>
-              <option>Residential</option>
-              <option>Commercial</option>
-            </select>
-            <button>🔍 SEARCH</button>
-          </div>
-          <div className="popular-links">
-            <h2>Popular Searches</h2>
-            <a href="#">Flat in Mumbai</a>
-            <a href="#">House in New Delhi</a>
-            <a href="#">Commercial in Bangalore</a>
-            <a href="#">Cars in Pune</a>
-          </div>
+          {/* <p className="banner-text">
+          Discover your perfect property, build your real estate portfolio, and unlock the potential of your assets with EstateEdge.
+          </p> */}
         </div>
       </div>
 

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import data from '../../data/data.json';
 import './Auction.css';
 
-// Import images from src/assets/bid/
 import apartment from '../../assets/bid/apartment.png';
 import beach from '../../assets/bid/beach.png';
 import commercial from '../../assets/bid/commercial.png';
@@ -19,14 +18,12 @@ import studio from '../../assets/bid/studio.png';
 import ware from '../../assets/bid/ware.png';
 import warehouse from '../../assets/bid/warehouse.png';
 
-// Array of images for assignment
 const images = [
   apartment, beach, commercial, con, farm, farmhouse,
   flat, goa, london, office, pent, penthouse,
   studio, ware, warehouse
 ];
 
-// Extend data with images and endTime
 const extendedData = data.map((item, i) => ({
   ...item,
   endTime: new Date(Date.now() + (5 + i) * 60 * 1000),
@@ -35,6 +32,9 @@ const extendedData = data.map((item, i) => ({
 
 function Auction() {
   const [auctions, setAuctions] = useState([]);
+  const [theme, setTheme] = useState('light');
+  const [bidHistory, setBidHistory] = useState([]);
+  const [showHistory, setShowHistory] = useState(false);
 
   useEffect(() => {
     setAuctions(extendedData);
@@ -56,6 +56,28 @@ function Auction() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  const handlePlaceBid = (item) => {
+    const newBid = {
+      id: Date.now(),
+      item: item.item,
+      amount: item.bid,
+      time: new Date().toLocaleTimeString()
+    };
+    setBidHistory(prev => [newBid, ...prev]);
+  };
+
+  const handleDeleteBid = (id) => {
+    setBidHistory(prev => prev.filter(bid => bid.id !== id));
+  };
+
   const formatTimeLeft = (ms) => {
     if (ms <= 0) return 'Auction Ended';
     const totalSeconds = Math.floor(ms / 1000);
@@ -68,16 +90,41 @@ function Auction() {
 
   return (
     <div className="auction-container">
-      <h1>Live Auctions</h1>
+      <div className="auction-top-bar">
+        <button onClick={() => window.location.href = '/'} className="back-btn">← Back to Home</button>
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {theme === 'dark' ? "☀️ Light" : "🌙 Dark"}
+        </button>
+        <button className="history-toggle" onClick={() => setShowHistory(!showHistory)}>
+           Bid History
+        </button>
+      </div>
+
+      {showHistory && (
+        <div className="bid-history-dropdown">
+          <h2>Bid History</h2>
+          <ul>
+            {bidHistory.length === 0 && <li>No bids placed yet.</li>}
+            {bidHistory.map((bid) => (
+              <li key={bid.id}>
+                {bid.item} – ₹{bid.amount} at {bid.time}
+                <button className="delete-btn" onClick={() => handleDeleteBid(bid.id)}></button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <h1>Live <span>Auctions</span></h1>
       <div className="auction-grid">
         {auctions.map((item) => (
           <div key={item.id} className="auction-card">
             <img src={item.image} alt={item.item} />
             <h3>{item.item}</h3>
-            <p><strong>Bidder:</strong> {item.bidder}</p>
-            <p><strong>Current Bid:</strong> {item.bid}</p>
-            <p><strong>Time Remaining:</strong> {item.countdown || 'Loading...'}</p>
-            <button className="place-bid-btn">Place Bid</button>
+            <p>Bidder: {item.bidder}</p>
+            <p>Current Bid: ₹{item.bid}</p>
+            <p>Time Remaining: {item.countdown || 'Loading...'}</p>
+            <button className="place-bid-btn" onClick={() => handlePlaceBid(item)}>Place Bid</button>
           </div>
         ))}
       </div>

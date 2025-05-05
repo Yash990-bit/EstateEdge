@@ -4,11 +4,11 @@
   padding: 0;
   overflow-x: hidden;
 }
+
 .auction-container {
-  /* padding: 20px ; */
-  /* margin: 20px; */
-  width: 180vh;
-  margin: 0 auto;
+  padding: 20px ;
+  width: 100vw;
+  margin:auto auto;
 }
 
 .auction-container h1 {
@@ -17,10 +17,14 @@
   text-align: center;
 }
 
+.auction-container h1 span {
+  color: #0044ff;
+}
+
 .auction-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 
 .auction-card {
@@ -67,3 +71,159 @@
   background-color: #10ac37;
 }
 
+.auction-top-bar {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px; 
+}
+
+.auction-top-bar h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.auction-top-bar h1 span {
+  color: #0044ff;
+}
+.back-btn,
+.theme-toggle-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: #0044ff;
+  border: 2px solid #040404;
+}
+
+.back-btn:hover {
+  background-color: #0044ff;
+  color: white;
+}
+
+.theme-toggle-btn {
+  background-color: white;
+  border: 2px solid #0044ff;
+  color: #0044ff;
+}
+
+body.light {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .auction-card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+body.light .auction-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .auction-container h1,
+  .auction-top-bar h1 {
+    font-size: 1.5rem;
+  }
+
+  .auction-card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auction-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auction-top-bar h1 {
+    font-size: 1.2rem;
+  }
+
+  .place-bid-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.history-toggle {
+  margin-left: auto;
+  background-color: #fff;
+  color: #0044ff;
+  padding: 8px 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 2px solid #0044ff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.history-toggle:hover {
+  background-color: #0044ff;
+  color: #fff;
+}
+
+.bid-history-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 260px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: white;
+  border: 2px solid #0044ff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.bid-history-dropdown h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #0044ff;
+}
+
+.bid-history-dropdown ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.bid-history-dropdown li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+body.dark .bid-history-dropdown {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-color: #10ac37;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  background: transparent;
+  color: red;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
