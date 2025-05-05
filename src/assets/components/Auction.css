@@ -66,3 +66,13 @@
 .place-bid-btn:hover {
   background-color: #10ac37;
 }
+
+.filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.filter-container select {
+  padding: 5px;
+}
