@@ -108,7 +108,7 @@ function Auction() {
             {bidHistory.map((bid) => (
               <li key={bid.id}>
                 {bid.item} – ₹{bid.amount} at {bid.time}
-                <button className="delete-btn" onClick={() => handleDeleteBid(bid.id)}></button>
+                <button className="delete-btn" onClick={() => handleDeleteBid(bid.id)}>❌</button>
               </li>
             ))}
           </ul>
@@ -128,6 +128,23 @@ function Auction() {
           </div>
         ))}
       </div>
+
+      <footer className="auction-footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <p>© 2025 Auction House</p>
+          </div>
+          <div className="footer-center">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+          </div>
+          <div className="footer-right">
+            <h1>Auction <span>House</span></h1>
+            
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

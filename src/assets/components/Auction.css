@@ -227,3 +227,61 @@ body.dark .bid-history-dropdown {
 .delete-btn:hover {
   color: darkred;
 }
+
+.auction-footer {
+  background-color: var(--footer-bg, #f0f0f0);
+  color: var(--footer-text, #333);
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  gap:20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  min-width: 150px;
+  margin-right: 10px 0;
+
+}
+
+.footer-center a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+  color: #0044ff;
+}
+
+.footer-right span {
+  margin-right: 0 6px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer-left p{
+  text-align: left;
+}
+
+.footer-right span:hover {
+  transform: scale(1.2);
+}
+
+body.dark .auction-footer {
+  --footer-bg: #111;
+  --footer-text: #ddd;
+}
