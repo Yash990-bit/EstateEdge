@@ -25,9 +25,9 @@ function App() {
         <img src={banner} alt="Auction Banner" className="banner-img" />
         <div className="banner-overlay">
           <h1 className="banner-heading">Your Trusted Partner <span>In Growth</span></h1>
-          {/* <p className="banner-text">
+          <p className="banner-text">
           Discover your perfect property, build your real estate portfolio, and unlock the potential of your assets with EstateEdge.
-          </p> */}
+          </p>
         </div>
       </div>
 
