@@ -202,3 +202,64 @@ h2 {
     background-color: #0f3db5;
   }
   
+  .sell-image {
+    position: relative;
+    text-align: center;
+  }
+  
+  .admir-image {
+    width: 85%;
+    height: 40%;
+    padding-left: 30px;
+    border-radius: 8px;
+    object-fit: cover;
+
+  }
+  
+  .stats-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 80%;
+  }
+  
+  .stats-block h2 {
+    font-size: 1.8rem;
+    color: #0b1c3f;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat-over {
+    font-size: 0.9rem;
+    color:#1a4ed8;
+  }
+  
+  .stat h3 {
+    font-size: 2.2rem;
+    color: #0b1c3f;
+    margin: 10px 0;
+  }
+  
+  .stat p {
+    font-size: 1rem;
+    color: #333;
+  }
+  

@@ -4,6 +4,7 @@ import propertyImage from '../../assets/sell/property.png';
 import docs from '../../assets/sell/docs.png';
 import house from '../../assets/sell/house.png';
 import pos from '../../assets/sell/pos.png';
+import admir from '../../assets/sell/admir.png';
 
 function Sell() {
   const scrollToForm = () => {
@@ -69,6 +70,30 @@ function Sell() {
           </div>
         </div>
         <button className="begin-btn" onClick={scrollToForm}>Begin to Post your Property</button>
+      </div>
+
+      <div className="sell-image">
+        <img src={admir} alt="Admir" className="admir-image" />
+        <div className="stats-block">
+      <h2>With over 7 million unique visitors monthly,your<br/> property gets maximum visibility <span className="highlight-auction">Auction</span> <span className="highlight-house">House.</span></h2>
+      <div className="stats">
+        <div className="stat">
+          <p className="stat-over">OVER</p>
+          <h3>1M</h3>
+          <p>Property Listings</p>
+        </div>
+        <div className="stat">
+          <p className="stat-over">OVER</p>
+          <h3>5.5M</h3>
+          <p>Monthly Searches</p>
+        </div>
+        <div className="stat">
+          <p className="stat-over">OVER</p>
+          <h3>200K</h3>
+          <p>Owners advertising monthly</p>
+        </div>
+      </div>
+      </div>
       </div>
     </>
   );
