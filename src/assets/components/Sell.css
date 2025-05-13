@@ -263,3 +263,81 @@ h2 {
     color: #333;
   }
   
+  .recently-posted-container {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .recently-posted-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b1c3f;
+    margin-bottom: 20px;
+  }
+  
+  .posted-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .posted-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  .posted-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    min-width: 320px;
+    max-width: 400px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .posted-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .posted-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .posted-info {
+    font-size: 1rem;
+    color: #0b1c3f;
+  }
+  
+  .posted-time {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  .dots {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+  }
+  
+  .dot.active {
+    background: #007bff;
+  }
+  

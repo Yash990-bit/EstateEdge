@@ -11,6 +11,22 @@ function Sell() {
     document.getElementById('sell-form').scrollIntoView({ behavior: 'smooth' });
   };
 
+  const posts = [
+    {
+      id: 1,
+      user: 'Ankita',
+      post: 'posted an Independent/Builder Floor 1455 sq.ft in Sector 82 Gurgaon, Gurgaon',
+      time: 'Just now',
+    },
+    {
+      id: 2,
+      user: 'Anil Jindal',
+      post: 'posted a Residential Apartment 1800 sq.ft in Sector 102 Gurgaon, Gurgaon',
+      time: 'Today',
+    },
+    // Add more posts if needed
+  ];
+
   return (
     <>
       <div className="sell-container">
@@ -93,6 +109,27 @@ function Sell() {
           <p>Owners advertising monthly</p>
         </div>
       </div>
+      </div>
+      </div>
+
+      <div className="recently">
+        <h2 className="recently-properties">Recently posted<br/> properties</h2>
+        <div className="posted-list">
+        {posts.map(item => (
+          <div key={item.id} className="posted-card">
+            <img src={house} alt="Icon" className="posted-icon" />
+            <div className="posted-info">
+              <strong>{item.user}</strong> {item.post}
+              <p className="posted-time">{item.time}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="dots">
+        <span className="dot active"></span>
+        <span className="dot"></span>
+        <span className="dot"></span>
       </div>
       </div>
     </>
