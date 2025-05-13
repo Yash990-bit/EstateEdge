@@ -1,0 +1,126 @@
+.sell-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f8faff;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.sell-image {
+    width: 100%;
+    margin-top: 15px;
+    transition: transform 0.3s;
+}
+
+.sell-image:hover {
+    transform: scale(1.05);
+}
+
+.highlight-auction {
+    color: #1a4ed8;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.highlight-house {
+    color: #637bd2;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.sell-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.sell-right {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sell-form h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    background:#acb9e9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color:#000000;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.phone-input {
+    background-color: #ffffff;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.start-btn {
+    background: #1a4ed8;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-text {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
