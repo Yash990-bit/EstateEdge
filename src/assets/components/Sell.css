@@ -397,4 +397,39 @@ h2 {
     }
   }
   
+  .fast {
+    text-align: left;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .fast-benefits {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .faster {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  .fast-free {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+
+  .highlight-auction {
+    color:#1a4ed8;
+  }
+  
+  .highlight-house {
+    color:#637bd2;
+  }
   

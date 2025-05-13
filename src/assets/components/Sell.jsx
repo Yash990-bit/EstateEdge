@@ -163,12 +163,22 @@ function Sell() {
   </div>
 </div>
 
-    <div className="fast">
-      <h4 className="fast-benefits">Additional Properties</h4>
-      <h2 className="faster">Everything <span className="highlight-auction">Auction</span> <span className="highlight-house">House</span> does to sell or rent out your property faster...</h2>
-      <p className="fast-free"> Post free property ads on AuctionHouse.com, India’s No. 1 property portal, to find genuine buyers and tenants. If you are the owner of a house, flat, apartment, villa, or any other residential property, you can conveniently post your property for rent or sale on our digital platform. Also, find your ideal tenants and buyers quickly to lease or sell your land, office space, shop, showroom, or any other commercial real estate. Whether you are a property owner, builder, or broker, you can rent or sell property online on AuctionHouse.com with ease.</p> 
-      <p className="fast-free">AuctionHouse.com is one of the most trustworthy portals buyers and tenants use online for flats, independent houses, offices, shops, showrooms, warehouses, land, and factories. What makes AuctionHouse.com unique is our high-quality website traffic and reach to millions of households across India and abroad, who are looking to buy or rent residential or commercial properties.</p>
-    </div>
+  <div className="fast">
+    <h4 className="fast-benefits">Additional Properties</h4>
+    <h2 className="faster">
+      Everything <span className="highlight-auction">Auction</span> <span className="highlight-house">House</span> does to sell or rent out your property faster...
+    </h2>
+    <p className="fast-free">
+      Post free property ads on AuctionHouse.com, India’s No. 1 property portal, to find genuine buyers and tenants. If you are the owner of a house, flat, apartment, villa, or any other residential property, you can conveniently post your property for rent or sale on our digital platform.
+      Also, find your ideal tenants and buyers quickly to lease or sell your land, office space, shop, showroom, or any other commercial real estate. Whether you are a property owner, builder, or broker, you can rent or sell property online on AuctionHouse.com with ease.
+    </p> 
+    <p className="fast-free">
+      AuctionHouse.com is one of the most trustworthy portals buyers and tenants use online for flats, independent houses, offices, shops, showrooms, warehouses, land, and factories.
+      What makes AuctionHouse.com unique is our high-quality website traffic and reach to millions of households across India and abroad, who are looking to buy or rent residential or commercial properties.
+    </p>
+    <button className="begin-btn" onClick={scrollToForm}>Begin to Post your Property</button>
+  </div>
+
     </>
   );
 }
