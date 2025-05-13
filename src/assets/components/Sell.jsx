@@ -24,8 +24,33 @@ function Sell() {
       post: 'posted a Residential Apartment 1800 sq.ft in Sector 102 Gurgaon, Gurgaon',
       time: 'Today',
     },
-    // Add more posts if needed
+    {
+      id: 3,
+      user: 'Rahul',
+      post: 'posted a Residential Plot in Sector 45 Gurgaon',
+      time: 'Yesterday',
+    },
+    {
+      id:4,
+      user:'Ravi',
+      post:'posted a Residential Apartment 1200 sq.ft in Sector 50 Gurgaon, Gurgaon',
+      time:'2 days ago',
+    },
+    {
+      id: 5,
+      user: 'Priya',
+      post: 'posted a Residential Apartment 1500 sq.ft in Sector 55 Gurgaon, Gurgaon',
+      time: '3 days ago',
+    },
+    {
+      id: 6,
+      user: 'Suresh',
+      post: 'posted a Residential Apartment 2000 sq.ft in Sector 78 Gurgaon, Gurgaon',
+      time: '4 days ago',
+    },
   ];
+
+  
 
   return (
     <>
@@ -113,25 +138,37 @@ function Sell() {
       </div>
 
       <div className="recently">
-        <h2 className="recently-properties">Recently posted<br/> properties</h2>
-        <div className="posted-list">
-        {posts.map(item => (
-          <div key={item.id} className="posted-card">
-            <img src={house} alt="Icon" className="posted-icon" />
-            <div className="posted-info">
-              <strong>{item.user}</strong> {item.post}
-              <p className="posted-time">{item.time}</p>
-            </div>
+      <h2 className="recently-properties">Recently <span>posted</span> properties</h2>
+    <div className="posted-marquee">
+    <div className="posted-track">
+      {posts.map((item) => (
+        <div key={item.id} className="posted-card">
+          <img src={house} alt="Icon" className="posted-icon" />
+          <div className="posted-info">
+            <strong>{item.user}</strong> {item.post}
+            <p className="posted-time">{item.time}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+      {posts.map((item) => (
+        <div key={`dup-${item.id}`} className="posted-card">
+          <img src={house} alt="Icon" className="posted-icon" />
+          <div className="posted-info">
+            <strong>{item.user}</strong> {item.post}
+            <p className="posted-time">{item.time}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
 
-      <div className="dots">
-        <span className="dot active"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
-      </div>
-      </div>
+    <div className="fast">
+      <h4 className="fast-benefits">Additional Properties</h4>
+      <h2 className="faster">Everything <span className="highlight-auction">Auction</span> <span className="highlight-house">House</span> does to sell or rent out your property faster...</h2>
+      <p className="fast-free"> Post free property ads on AuctionHouse.com, India’s No. 1 property portal, to find genuine buyers and tenants. If you are the owner of a house, flat, apartment, villa, or any other residential property, you can conveniently post your property for rent or sale on our digital platform. Also, find your ideal tenants and buyers quickly to lease or sell your land, office space, shop, showroom, or any other commercial real estate. Whether you are a property owner, builder, or broker, you can rent or sell property online on AuctionHouse.com with ease.</p> 
+      <p className="fast-free">AuctionHouse.com is one of the most trustworthy portals buyers and tenants use online for flats, independent houses, offices, shops, showrooms, warehouses, land, and factories. What makes AuctionHouse.com unique is our high-quality website traffic and reach to millions of households across India and abroad, who are looking to buy or rent residential or commercial properties.</p>
+    </div>
     </>
   );
 }

@@ -263,6 +263,21 @@ h2 {
     color: #333;
   }
   
+  .recently-properties{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    border-radius: 3px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .recently-properties span{
+    color: #1a4ed8;
+  }
+
   .recently-posted-container {
     padding: 40px 20px;
     background-color: #fff;
@@ -280,11 +295,11 @@ h2 {
     gap: 20px;
     overflow-x: auto;
     padding-bottom: 10px;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
   }
   
   .posted-list::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none; 
   }
   
   .posted-card {
@@ -340,4 +355,46 @@ h2 {
   .dot.active {
     background: #007bff;
   }
+  
+  .posted-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .posted-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+  
+  .posted-card {
+    flex: 0 0 auto;
+    width: 320px;
+    margin-right: 60px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX(-50%);
+    }
+    50% {
+      transform: translateX(-50%); 
+    }
+    95% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
   
