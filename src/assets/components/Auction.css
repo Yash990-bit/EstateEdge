@@ -229,8 +229,8 @@ body.dark .bid-history-dropdown {
 }
 
 .auction-footer {
-  background-color: var(--footer-bg, #f0f0f0);
-  color: var(--footer-text, #333);
+  background-color:#ffffff;
+  color: #333;
   padding: 20px 0;
   margin-top: 40px;
   text-align: center;

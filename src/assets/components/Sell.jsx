@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Sell.css'; 
 import propertyImage from '../../assets/sell/property.png';
 import docs from '../../assets/sell/docs.png';
@@ -50,7 +50,29 @@ function Sell() {
     },
   ];
 
-  
+  const faqData=[
+    {
+      question: "What type of property can I post on AuctionHouse.com for selling/renting?",
+      answer: "As an owner, agent, or builder, you can post all types of residential and commercial properties for rent, lease, or sale. AuctionHouse.com is the best property portal to sell or rent your property fast!",
+    },
+    {
+      question: "Is posting property for selling/renting on AuctionHouse.com FREE?",
+      answer: "Yes, you can post your property online for free. There are no charges involved. All buyer/tenant enquiries will be shared with you completely free of cost.",
+    },
+    {
+      question: "Can I sell/rent out my property on my own without paying brokerage?",
+      answer: "Yes, as a property owner, you can sell or rent your property online using our free service without involving any real estate agents.",
+    },
+    {
+      question: "How can I rent/sell my property faster?",
+       answer: "Make your property listings as detailed as possible to get more visibility and relevant buyers or tenants.For more information you can call +91 9999 999 999.",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(null);
+  const toggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <>
@@ -152,7 +174,7 @@ function Sell() {
       ))}
       {posts.map((item) => (
         <div key={`dup-${item.id}`} className="posted-card">
-          <img src={house} alt="Icon" className="posted-icon" />
+          <img src={house} alt="Icon" className="posted-icon"/>
           <div className="posted-info">
             <strong>{item.user}</strong> {item.post}
             <p className="posted-time">{item.time}</p>
@@ -177,9 +199,45 @@ function Sell() {
       What makes AuctionHouse.com unique is our high-quality website traffic and reach to millions of households across India and abroad, who are looking to buy or rent residential or commercial properties.
     </p>
     <button className="begin-btn" onClick={scrollToForm}>Begin to Post your Property</button>
-  </div>
+    </div>
 
-    </>
+    <div className="content-wrapper">
+      <h4 className="more-fast">KNOW MORE ABOUT POSTING ON AUCTION HOUSE</h4>
+      <h2 className="more-faster">Frequently Asked Questions</h2>
+      <div className="faq-container">
+          {faqData.map((item, index) => (
+            <div key={index} className="faq-item">
+              <div className="faq-question" onClick={() => toggle(index)}>
+                {item.question}
+                <span className="faq-icon">{activeIndex === index ? "-" : "+"}</span>
+              </div>
+              {activeIndex === index && (
+                <div className="faq-answer">
+                  {item.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    
+  <footer className="feed">
+    <div className="feed-content">
+      <p>&copy; 2025 Auction House. All rights reserved.</p>
+      <ul className="feed-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+      <p className="feed-note">Follow us on:
+      <a href="#"> Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+      </p>
+    </div>
+  </footer>
+  </>
   );
 }
 
