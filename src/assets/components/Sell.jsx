@@ -11,6 +11,7 @@ function Sell() {
     document.getElementById('sell-form').scrollIntoView({ behavior: 'smooth' });
   };
 
+
   const posts = [
     {
       id: 1,
@@ -73,7 +74,7 @@ function Sell() {
   const toggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+  
   return (
     <>
       <div className="sell-container">
@@ -102,7 +103,7 @@ function Sell() {
               <button className="option-btn">Rent / Lease</button>
               <button className="option-btn">PG</button>
             </div>
-
+          
             <div className="contact-form">
               <input type="text" placeholder="Phone Number" className="phone-input" />
               <button className="start-btn">Start now</button>
