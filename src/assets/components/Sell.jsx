@@ -234,7 +234,7 @@ function Sell() {
         <li><a href="#">Feedback</a></li>
       </ul>
       <p className="feed-note">Follow us on:
-      <a href="#"> Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+      <a href="#"> Facebook</a> | <a href="https://www.instagram.com/whyash7/">Instagram</a> | <a href="https://www.linkedin.com/in/yash-raghubanshi-ba9ba630b">Linkdein</a>
       </p>
     </div>
   </footer>

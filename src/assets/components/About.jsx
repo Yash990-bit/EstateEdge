@@ -3,6 +3,7 @@ import "./About.css";
 
 function About() {
   return (
+    <>
     <div className="about-contain">
         <div className="hero-section">
             <h1 className="hero-title">Empowering <span>Real Estate</span> Transactions</h1>
@@ -20,6 +21,11 @@ function About() {
             </p>
         </div>
     </div>
+    <div className="our">
+      
+    </div>
+    </>
+
   )
 }
 

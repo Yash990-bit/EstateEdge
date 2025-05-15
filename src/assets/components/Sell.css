@@ -248,7 +248,7 @@ h2 {
     text-align: center;
   }
   
-  .stat-over {
+  .stat-over p{
     font-size: 0.9rem;
     color:#1a4ed8;
   }
