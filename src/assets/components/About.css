@@ -1,7 +1,7 @@
 .about-contain {
     background-color: #8faae2;
     min-height: 100vh;
-    width: 100vw; 
+    width: 100%; 
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     overflow-x: hidden; 
@@ -69,11 +69,11 @@
 
 .mission {
     text-align: center;
-    padding: 80px 20px;
+    padding: 30px 20px 0; 
+    margin: 0; 
     width: 100%;
-    background-color: #8faae2;
-    min-height: 100vh;
-    min-width: 100vw; 
+    background-color:#8faae2;
+    box-sizing: border-box; 
 }
 
 .mission-title {
@@ -89,4 +89,56 @@
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.our {
+    padding: 40px 20px;
+    background-color: #f9fafb;
+    text-align: center;
+}
+  
+.our-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 30px;
+}
+  
+.our-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-full {
+    width: calc(100% - 40px);
+    max-width: 960px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+  
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+  
+.card-text {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
 }
