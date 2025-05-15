@@ -22,9 +22,9 @@ const Navbar = () => {
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
           <a href="/">Home</a>
           {/* <Link to="/auctions">Auctions</Link> */}
+          <a href="/about">About Us</a>
           <a href="/auctions">Auctions</a>
           <a href="/sell">Sell Property</a>
-          <a href="/about">About Us</a>
           <a href="www.linkedin.com/in/yash-raghubanshi-ba9ba630b">Contact</a>
 
           <div className="search-bar">

@@ -1,0 +1,92 @@
+.about-contain {
+    background-color: #8faae2;
+    min-height: 100vh;
+    width: 100vw; 
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    margin: 0; 
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #8faae2;
+    min-width: 100vw; 
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-title span{
+    color: #2563eb;
+}
+
+.hero-house {
+    color:#3c3c3c;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.primary:hover {
+    background-color: #1d4ed8;
+}
+
+.secondary {
+    background-color: transparent;
+    color: #2563eb;
+    padding: 12px 24px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary:hover {
+    background-color: #eff6ff;
+    color: #1e40af;
+}
+
+.mission {
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+    background-color: #8faae2;
+    min-height: 100vh;
+    min-width: 100vw; 
+}
+
+.mission-title {
+    font-size: 2.5rem;
+    color: #111827;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mission-text {
+    color:#3f3f3f;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
