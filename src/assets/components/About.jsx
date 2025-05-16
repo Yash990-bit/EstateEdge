@@ -3,6 +3,10 @@ import "./About.css";
 import Aman from "../client/aman.png";
 import Ankit from "../client/ankit.png";
 import Neelanshu from "../client/neelanshu.png";
+import Yash from "../client/yash.png";
+import Shaurya from "../client/shaurya.png";
+import Kavya from "../client/kavya.png";
+import Chaitanya from "../client/chaitanya.png";
 
 function About() {
   return (
@@ -96,6 +100,90 @@ function About() {
         <button className="blue-button">Explore Auctions</button>
         <button className="blue-button">Sell Property</button>
       </div>
+      </div>
+
+      <div className="journey">
+        <h2 className="journey-title">Our Journey</h2>
+        <div className="time">
+          <div className="time-event">
+            <div className="time-point"></div>
+            <div className="time-content">
+              <p className="time-year">2021</p>
+              <p>Founded with a vision to bring real estate online.</p>
+            </div>
+          </div>
+
+          <div className="time-event">
+            <div className="time-point"></div>
+            <div className="time-content">
+              <p className="time-year">2022</p>
+              <p>Crossed 10,000+ successful auctions.</p>
+            </div>
+          </div>
+
+          <div className="time-event">
+            <div className="time-point"></div>
+            <div className="time-content">
+              <p className="time-year">2023</p>
+              <p>Launched mobile app for easier access.</p>
+            </div>
+          </div>
+
+          <div className="time-event">
+            <div className="time-point"></div>
+            <div className="time-content">
+              <p className="time-year">2024</p>
+              <p>Expanded to international markets.</p>
+            </div>
+          </div>
+
+          <div className="time-event">
+            <div className="time-point"></div>
+            <div className="time-content">
+              <p className="time-year">2025</p>
+              <p>Introduced AI-driven property recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="team">
+        <h2 className="team-title">Meet Our Team</h2>
+        <div className="team-cards">
+          <div className="team-card">
+            <img src={Yash} alt="" className="team-img"/>
+            <h3 className="team-name">Yash Raghubanshi</h3>
+            <p className="team-role">CEO</p>
+            <p className="team-quote">"Driven by innovation,committed to trust."</p>
+          </div>
+        
+        <div className="team-card">
+        <img src={Shaurya} alt="" className="team-img"/>
+        <h3 className="team-name">Shaurya Sharma</h3>
+        <p className="team-role">COO</p>
+        <p className="team-quote">"Building bridges between technology and real estate."</p>
+        </div>
+
+        <div className="team-card">
+        <img src={Kavya} alt="" className="team-img"/>
+        <h3 className="team-name">Kavya Mukhija</h3>
+        <p className="team-role">CTO</p>
+        <p className="team-quote">"Passion for code that transforms lives."</p>
+        </div>
+
+        <div className="team-card">
+        <img src={Chaitanya} alt="" className="team-img"/>
+        <h3 className="team-name">Chaitanya Singh</h3>
+        <p className="team-role">CFO</p>
+        <p className="team-quote">"Ensuring financial integrity and growth."</p>
+        </div>
+        </div>
+      </div>
+
+      <div className="footer-house">
+        <h4 className="footer-text">Auction House</h4>
+        <p className="footer-description">Revolutionizing real estate transactions across India.</p>
+        
       </div>
     </>
   )
