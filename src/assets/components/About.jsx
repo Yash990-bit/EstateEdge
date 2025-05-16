@@ -180,11 +180,50 @@ function About() {
         </div>
       </div>
 
-      <div className="footer-house">
-        <h4 className="footer-text">Auction House</h4>
-        <p className="footer-description">Revolutionizing real estate transactions across India.</p>
-        
+      <footer className="footer">
+      <div className="footer-role">
+        <h4 className="footer-house">Auction House</h4>
+        <p className="footer-real">Revolutionizing real estate transactions across India.</p>
+        <div className="footer-social-icons">
+          <span className="icon">⬜</span>
+          <span className="icon">⬜</span>
+          <span className="icon">⬜</span>
+          <span className="icon">⬜</span>
+        </div>
       </div>
+
+      <div className="footer-life">
+        <h4 className="footer-house">Quick Links</h4>
+        <ul className="footer-list">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Auctions</li>
+          <li>Sell Property</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <div className="footer-life">
+        <h4 className="footer-house">Resources</h4>
+        <ul className="footer-list">
+          <li>FAQs</li>
+          <li>Blog</li>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div className="footer-life">
+        <h4 className="footer-house">Contact Us</h4>
+        <p>123 Business Park, Mumbai, India</p>
+        <p>+91 123 456 7890</p>
+        <p>info@auctionhouse.com</p>
+      </div>
+
+      <div className="footer-copyright">
+        <p>© 2025 Auction House. All rights reserved.</p>
+      </div>
+    </footer>
     </>
   )
 }
