@@ -8,7 +8,9 @@ import Shaurya from "../client/shaurya.png";
 import Kavya from "../client/kavya.png";
 import Chaitanya from "../client/chaitanya.png";
 
+
 function About() {
+
   return (
     <>
       <div className="about-contain">
@@ -180,7 +182,7 @@ function About() {
         </div>
       </div>
 
-      <footer className="footer">
+    <footer className="footer">
       <div className="footer-role">
         <h4 className="footer-house">Auction House</h4>
         <p className="footer-real">Revolutionizing real estate transactions across India.</p>
@@ -195,21 +197,21 @@ function About() {
       <div className="footer-life">
         <h4 className="footer-house">Quick Links</h4>
         <ul className="footer-list">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Auctions</li>
-          <li>Sell Property</li>
-          <li>Contact</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#auctions">Auctions</a></li>
+          <li><a href="#sell">Sell Property</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
       <div className="footer-life">
         <h4 className="footer-house">Resources</h4>
         <ul className="footer-list">
-          <li>FAQs</li>
-          <li>Blog</li>
-          <li>Terms & Conditions</li>
-          <li>Privacy Policy</li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#terms">Terms & Conditions</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
         </ul>
       </div>
 

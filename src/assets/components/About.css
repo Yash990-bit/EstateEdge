@@ -437,6 +437,17 @@
     gap: 8px;
   }
   
+  .footer-life a {
+    color: #ccc; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-life a:hover {
+    color: #ffffff;
+  }
+  
+  
   .footer-social-icons .icon {
     width: 24px;
     height: 24px;
@@ -460,12 +471,13 @@
   .footer-section li {
     margin-bottom: 8px;
     cursor: pointer;
+    color: aliceblue;
     transition: color 0.3s;
   }
   
-  .footer-section li:hover {
+  .footer-section li a:hover {
     text-decoration: underline;
-    color: #2563eb;
+    color:#ffffff;
   }
   
   .footer-section p {
