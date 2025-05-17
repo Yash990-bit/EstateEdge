@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Auction from './assets/components/Auction.jsx'
 import Sell from './assets/components/Sell.jsx'
 import About from './assets/components/About.jsx'
+import Contact from './assets/components/Contact.jsx'
 
 createRoot(document.getElementById('root')).render( 
   <BrowserRouter>
@@ -14,7 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/about" element={<About />} /> 
         <Route path="/auctions" element={<Auction />} />
         <Route path="/sell" element={<Sell />} />
-        <Route path="/contact" element={<App />} />
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
   </BrowserRouter>
 )
