@@ -522,7 +522,7 @@ h2 {
   }
   
   .feed-note a {
-    color: #4e9cfa;
+    color:#000000;
     margin: 0 5px;
     text-decoration: none;
     transition: color 0.3s;

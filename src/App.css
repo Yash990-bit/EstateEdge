@@ -85,6 +85,14 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.off-video video:hover {
+  transform: scale(1.05);
+}
+
+.off-video video {
+  transition: transform 0.3s ease;
+}
+
 .off-text,
 .become,
 .global {
@@ -120,10 +128,25 @@ body {
   border-radius: 8px;
 }
 
+.become-image:hover img {
+  transform: scale(1.05);
+}
+
+.become-image img {
+  transition: transform 0.3s ease;
+}
+
+.globe-image:hover img {
+  transform: scale(1.05);
+}
+
+.globe-image img{
+  transition: transform 0.3s ease;
+}
+
 .globe-image {
   margin-left: 0; 
 }
-
 
 .Image-section,
 .Img-section {
