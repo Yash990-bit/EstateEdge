@@ -18,6 +18,10 @@
   color: inherit;
 }
 
+.highlight {
+  color: #003de6;
+}
+
 .contact-description {
   font-size: 18px;
   line-height: 28px;

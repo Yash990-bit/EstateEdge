@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
     <div className='contact'>
-      <h1 className="contact-title">Get in Touch with Us</h1>
+      <h1 className="contact-title">Get in <span>Touch with</span> Us</h1>
       <p className="contact-description">Question,feedback,or need support? We're here to help.</p>
     </div>
 
