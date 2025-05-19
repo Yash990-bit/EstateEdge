@@ -1,15 +1,41 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Contact.css'
 
 function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "3c8bd682-8a6c-4d1c-82a2-50bb5ce8cccf");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+      setTimeout(()=>setResult(""),2000)
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+      setTimeout(()=>setResult(""),2000)
+    }
+  };
   return (
     <>
     <div className='contact'>
-      <h1 className="contact-title">Get in <span>Touch with</span> Us</h1>
+      <h1 className="contact-title">Get in <span className="highlight">Touch with</span> Us</h1>
       <p className="contact-description">Question,feedback,or need support? We're here to help.</p>
     </div>
 
-    <form className="contact-message">
+    <form className="contact-message" onSubmit={onSubmit}>
       <h2 className="contact-form-title">Contact Us</h2>
       <div className="contact-form-group">
         <label htmlFor="name" className="contact-form-label">Full Name</label>
@@ -32,6 +58,7 @@ function Contact() {
       </div>
 
       <button type="submit" className="contact-form-button">Send Message</button>
+      {result && <p className="contact-result">{result}</p>}
 
     <div className="connect-with-us">
       <h3 className="connect-title">Connect With Us</h3>
