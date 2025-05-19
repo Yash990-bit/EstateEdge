@@ -32,6 +32,16 @@ function Contact() {
       </div>
 
       <button type="submit" className="contact-form-button">Send Message</button>
+
+    <div className="connect-with-us">
+      <h3 className="connect-title">Connect With Us</h3>
+      <div className="connect-icons">
+      <a href="https://www.instagram.com/whyash7" target="_blank" rel="noopener noreferrer" className="connect-icon facebook">Instagram</a>
+      <a href="https://github.com/Yash990-bit" target="_blank" rel="noopener noreferrer" className="connect-icon github">Github</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="connect-icon linkedin">LinkedIn</a>
+      <a href="tel:+1234567890" className="connect-icon phone">Call</a>
+    </div>
+  </div>
     </form>
     </>
   )

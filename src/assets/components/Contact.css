@@ -27,7 +27,7 @@
 
 .contact-message {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 48px 24px;
@@ -111,6 +111,42 @@
 }
 
 .contact-form-button:hover {
-  background-color:#7397de;
+  background-color:#8faae2;
   transform: translateY(-1px);
 }
+
+.connect-with-us {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.connect-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.connect-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.connect-icon {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #1a4ed8;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.connect-icon:hover {
+  background-color: #7397de;
+  transform: translateY(-2px);
+}
+
