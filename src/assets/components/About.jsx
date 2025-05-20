@@ -7,6 +7,7 @@ import Yash from "../client/yash.png";
 import Shaurya from "../client/shaurya.png";
 import Kavya from "../client/kavya.png";
 import Chaitanya from "../client/chaitanya.png";
+import { Link } from 'react-router-dom';
 
 
 function About() {
@@ -18,8 +19,8 @@ function About() {
           <h1 className="hero-title">Empowering <span>Real Estate</span> Transactions</h1>
           <p className="hero-house">Auction House is revolutionizing the way properties are bought, sold, and discovered.</p>
           <div className="hero-sold">
-            <button className="primary">Explore Auctions</button>
-            <button className="secondary">Sell Your Property</button>
+            <Link to="/auctions" className="primary">Explore Auctions</Link>
+            <Link to="/sell" className="secondary">Sell Your Property</Link>
           </div>
         </div> 
 
@@ -99,8 +100,8 @@ function About() {
         <h2 className="blue-title">Join thousands of happy buyers and sellers</h2>
         <p className="blue-text"> Whether you're looking to buy your dream property or sell at the best price.</p>
         <div className="blue-buttons">
-        <button className="blue-button">Explore Auctions</button>
-        <button className="blue-button">Sell Property</button>
+        <Link to="/auctions" className="blue-button">Explore Auctions</Link>
+        <Link to="/sell" className="blue-button">Sell Property</Link>
       </div>
       </div>
 
