@@ -185,7 +185,7 @@ function About() {
 
     <footer className="footer">
       <div className="footer-role">
-        <h4 className="footer-house">Auction House</h4>
+        <h4 className="footer-house">Auction <span>House</span></h4>
         <p className="footer-real">Revolutionizing real estate transactions across India.</p>
         <div className="footer-social-icons">
           <span className="icon">⬜</span>

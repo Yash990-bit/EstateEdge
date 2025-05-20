@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="world-footer">
   <div className="world-role">
-    <h4 className="world-house">Auction House</h4>
+    <h4 className="world-house">Auction <span>House</span></h4>
     <p className="world-real">Revolutionizing real estate transactions across India.</p>
     <div className="world-social-icons">
       <span className="world-icon">⬜</span>
