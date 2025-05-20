@@ -198,11 +198,11 @@ function About() {
       <div className="footer-life">
         <h4 className="footer-house">Quick Links</h4>
         <ul className="footer-list">
-          <li><a href="#home">Home</a></li>
+          <li><Link to="/">Home</Link></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#auctions">Auctions</a></li>
-          <li><a href="#sell">Sell Property</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/auctions">Auctions</Link></li>
+          <li><Link to="/sell">Sell Property</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
 

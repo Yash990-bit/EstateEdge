@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,11 +19,11 @@ const Footer = () => {
   <div className="world-life">
     <h4 className="world-house">Quick Links</h4>
     <ul className="world-list">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#auctions">Auctions</a></li>
-      <li><a href="#sell">Sell Property</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a a="#href">Home</a></li>
+      <li><Link to="/about">About Us</Link></li>
+      <li><Link to="/auctions">Auctions</Link></li>
+      <li><Link to="/sell">Sell Property</Link></li>
+      <li><Link to="/contact">Contact</Link></li>
     </ul>
   </div>
 
@@ -42,6 +43,7 @@ const Footer = () => {
     <p>+91 123 456 7890</p>
     <p>info@auctionhouse.com</p>
   </div>
+
 
   <div className="world-copyright">
     <p>© 2025 Auction House. All rights reserved.</p>

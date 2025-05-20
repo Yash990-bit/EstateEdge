@@ -5,6 +5,7 @@ import docs from '../../assets/sell/docs.png';
 import house from '../../assets/sell/house.png';
 import pos from '../../assets/sell/pos.png';
 import admir from '../../assets/sell/admir.png';
+import { Link } from 'react-router-dom';
 
 function Sell() {
   const scrollToForm = () => {
@@ -228,8 +229,8 @@ function Sell() {
       <ul className="feed-links">
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><Link to="/contact">Contact Us</Link></li>
+        <li><Link to="/about">About Us</Link></li>
         <li><a href="#">FAQs</a></li>
         <li><a href="#">Feedback</a></li>
       </ul>
