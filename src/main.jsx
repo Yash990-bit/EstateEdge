@@ -7,6 +7,8 @@ import Auction from './assets/components/Auction.jsx'
 import Sell from './assets/components/Sell.jsx'
 import About from './assets/components/About.jsx'
 import Contact from './assets/components/Contact.jsx'
+import  Login from './assets/components/Login.jsx'
+import Signup from './assets/components/Signup.jsx'
 
 createRoot(document.getElementById('root')).render( 
   <BrowserRouter>
@@ -16,6 +18,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/auctions" element={<Auction />} />
         <Route path="/sell" element={<Sell />} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
   </BrowserRouter>
 )

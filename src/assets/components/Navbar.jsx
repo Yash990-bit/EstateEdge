@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -31,8 +33,8 @@ const Navbar = () => {
           </div>
 
           <div className="auth-buttons">
-            <button className="login-btn">Login</button>
-            <button className="signup-btn">Sign Up</button>
+            <button className="login-btn" onClick={()=>navigate("/login")}>Login</button>
+            <button className="signup-btn" onClick={()=>navigate("/signup")}>Sign Up</button>
           </div>
         </div>
 

@@ -1,0 +1,82 @@
+/* Login.css */
+.login-form {
+    width: 50%;
+    position: absolute;
+    margin: 80px auto;
+    padding: 32px;
+    top:10%;
+    left:25%;
+    background-color:#8faae2; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-theme .login-form {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1a4ed8;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .login-form input:focus {
+    border-color: #1a4ed8;
+  }
+  
+  .password-container {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a4ed8;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .login-form button:hover {
+    background-color: #153bbf;
+  }
+  
+  .auth-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .forgot-password {
+    color: #1a4ed8;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
