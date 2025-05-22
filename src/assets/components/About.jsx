@@ -1,7 +1,7 @@
 import React from 'react'
 import "./About.css";
 import Aman from "../client/aman.png";
-import Ankit from "../client/ankit.png";
+import Ankit from "../client/Ankit.png";
 import Neelanshu from "../client/neelanshu.png";
 import Yash from "../client/yash.png";
 import Shaurya from "../client/shaurya.png";
