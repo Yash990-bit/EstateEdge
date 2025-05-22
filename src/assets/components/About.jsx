@@ -1,12 +1,12 @@
 import React from 'react'
 import "./About.css";
-import Aman from "../client/aman.png";
+import Aman from "../client/Aman.png";
 import Ankit from "../client/Ankit.png";
-import Neelanshu from "../client/neelanshu.png";
-import Yash from "../client/yash.png";
-import Shaurya from "../client/shaurya.png";
-import Kavya from "../client/kavya.png";
-import Chaitanya from "../client/chaitanya.png";
+import Neelanshu from "../client/Neelanshu.png";
+import Yash from "../client/Yash.png";
+import Shaurya from "../client/Shaurya.png";
+import Kavya from "../client/Kavya.png";
+import Chaitanya from "../client/Chaitanya.png";
 import { Link } from 'react-router-dom';
 
 
