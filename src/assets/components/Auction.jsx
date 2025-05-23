@@ -18,8 +18,7 @@ import studio from '../../assets/bid/studio.png';
 import ware from '../../assets/bid/ware.png';
 import warehouse from '../../assets/bid/warehouse.png';
 import condos from '../../assets/bid/condos.png';
-// import studioflat '../../assets/bid/studioflat.png';
-// import studios '../../assets/bid/studios.png';
+
 
 const images = [
   apartment, beach, commercial, con, farm, farmhouse,

@@ -108,7 +108,7 @@ function Sell() {
             <div className="contact-form">
               <input type="text" placeholder="Phone Number" className="phone-input" />
               <button className="start-btn">Start now</button>
-              <p className="login-text">Are you a registered user? <a href="#">Login</a></p>
+              <p className="login-text">Are you a registered user? <Link to="/login">Login</Link></p>
             </div>
           </div>
         </div>
