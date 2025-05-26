@@ -31,9 +31,9 @@ const Footer = () => {
     <h4 className="world-house">Resources</h4>
     <ul className="world-list">
       <li><a href="#faqs">FAQs</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#terms">Terms & Conditions</a></li>
-      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a to="#blog">Blog</a></li>
+      <li><a to="#terms">Terms & Conditions</a></li>
+      <li><a to="#privacy">Privacy Policy</a></li>
     </ul>
   </div>
 
