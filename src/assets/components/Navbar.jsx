@@ -28,9 +28,7 @@ const Navbar = () => {
           <a href="/sell">Sell Property</a>
           <a href="/contact">Contact</a>
 
-          <div className="search-bar">
-            <i className="fas fa-search"></i>
-          </div>
+        
 
           <div className="auth-buttons">
             <button className="login-btn" onClick={()=>navigate("/login")}>Login</button>

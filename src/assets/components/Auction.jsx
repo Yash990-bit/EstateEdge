@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import data from '../../data/data.json';
 import './Auction.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
 import apartment from '../../assets/bid/apartment.png';
 import beach from '../../assets/bid/beach.png';
 import commercial from '../../assets/bid/commercial.png';
@@ -37,6 +40,8 @@ function Auction() {
   const [theme, setTheme] = useState('light');
   const [bidHistory, setBidHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
 
   useEffect(() => {
     setAuctions(extendedData);
@@ -90,6 +95,10 @@ function Auction() {
       .toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
+  const filteredAuctions = auctions.filter(item =>
+    item.item.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="auction-container">
       <div className="auction-top-bar">
@@ -100,6 +109,21 @@ function Auction() {
         <button className="history-toggle" onClick={() => setShowHistory(!showHistory)}>
            Bid History
         </button>
+      </div>
+
+      <div className={`search-bar ${searchOpen ? 'search-open' : ''}`}>
+        <input
+          type="text"
+          placeholder="Search Auctions..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onFocus={() => setSearchOpen(true)}
+          onBlur={() => setSearchOpen(false)}
+          className="search-input"
+        />
+        <span className="search-icon">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </span>
       </div>
 
       {showHistory && (
@@ -117,19 +141,21 @@ function Auction() {
         </div>
       )}
 
-      <h1>Live <span>Auctions</span></h1>
-      <div className="auction-grid">
-        {auctions.map((item) => (
-          <div key={item.id} className="auction-card">
-            <img src={item.image} alt={item.item} />
-            <h3>{item.item}</h3>
-            <p>Bidder: {item.bidder}</p>
-            <p>Current Bid: ₹{item.bid}</p>
-            <p>Time Remaining: {item.countdown || 'Loading...'}</p>
-            <button className="place-bid-btn" onClick={() => handlePlaceBid(item)}>Place Bid</button>
-          </div>
-        ))}
-      </div>
+<h1>Live <span>Auctions</span></h1>
+<div className="auction-grid">
+  {filteredAuctions.length === 0 && <p>No items found.</p>}
+  {filteredAuctions.map((item) => (
+    <div key={item.id} className="auction-card">
+      <img src={item.image} alt={item.item} />
+      <h3>{item.item}</h3>
+      <p>Bidder: {item.bidder}</p>
+      <p>Current Bid: ₹{item.bid}</p>
+      <p>Time Remaining: {item.countdown || 'Loading...'}</p>
+      <button className="place-bid-btn" onClick={() => handlePlaceBid(item)}>Place Bid</button>
+    </div>
+  ))}
+</div>
+
 
       <footer className="auction-footer">
         <div className="footer-content">
