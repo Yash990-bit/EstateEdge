@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { sendPasswordResetEmail } from "firebase/auth";
+import { sendPasswordResetEmail} from "firebase/auth";
 import { auth } from "./firebase";
 import "./ForgotPassword.css"; 
 
@@ -27,6 +27,8 @@ const ForgotPassword = () => {
         required
       />
       <button type="submit">Send Reset Email</button>
+
+      
     </form>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword ,GoogleAuthProvider, signInWithPopup,} from "firebase/auth";
 import { auth } from "./firebase";
 import "./Login.css";
+import GoogleLogo from "../images/google.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,6 +25,17 @@ const Login = () => {
       alert(err.message);
     }
   };
+
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      alert("Logged in with Google successfully!");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -56,6 +68,10 @@ const Login = () => {
 
       <button type="submit">Login</button>
 
+      <button type="button" onClick={handleGoogleLogin} className="google-icon-button">
+        <img src={GoogleLogo} alt="Google login" className="google-logo-circle" />
+      </button>
+      
       <div className="auth-links">
         <a href="/forgot-password" className="forgot-password">
           Forgot Password?

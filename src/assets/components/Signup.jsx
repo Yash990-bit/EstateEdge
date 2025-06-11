@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import { auth } from "./firebase";
 import "./Signup.css";
+import Google from "../images/google.png"; 
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -12,8 +13,8 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    setLoading(true); 
-    setError(""); 
+    setLoading(true);
+    setError("");
 
     if (!email || !password) {
       setError("Email and password are required.");
@@ -25,8 +26,24 @@ const Signup = () => {
       await createUserWithEmailAndPassword(auth, email, password);
       alert("Signup successful!");
     } catch (err) {
-      setError(err.message); 
-      setLoading(false); 
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleSignup = async () => {
+    const provider = new GoogleAuthProvider();
+    setLoading(true);
+    setError("");
+
+    try {
+      await signInWithPopup(auth, provider);
+      alert("Signup with Google successful!");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -54,10 +71,8 @@ const Signup = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <span
-          className="toggle-password"
-          onClick={togglePasswordVisibility}
-        >
+        <span className="toggle-password" onClick={togglePasswordVisibility}>
+          {showPassword ? "Hide" : "Show"}
         </span>
       </div>
 
@@ -65,11 +80,15 @@ const Signup = () => {
         {loading ? "Signing up..." : "Sign Up"}
       </button>
 
-      <div className="auth-links">
-        <p>
-          Already have an account? <a href="/login">Log in</a>
-        </p>
-      </div>
+      <button
+        type="button"
+        onClick={handleGoogleSignup}
+        disabled={loading}
+        className="google-icon-button">
+        <img src={Google} alt="Google logo" className="google-logo-circle" />
+      </button>
+
+
     </form>
   );
 };

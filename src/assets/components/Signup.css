@@ -114,3 +114,35 @@ body.dark-theme .auth-links a {
   text-align: center;
   font-size: 14px;
 }
+
+.google-icon-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px auto 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0;
+}
+
+.google-icon-button:hover {
+  color: #003acb;
+}
+
+.google-icon-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.google-logo-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 5%;         
+  object-fit: cover;
+}
