@@ -21,12 +21,33 @@ import studio from '../../assets/bid/studio.png';
 import ware from '../../assets/bid/ware.png';
 import warehouse from '../../assets/bid/warehouse.png';
 import condos from '../../assets/bid/condos.png';
+import cabin from '../../assets/bid/cabin.png';
+import cave from '../../assets/bid/cave.png';
+import cliff from '../../assets/bid/cliff.png';
+import colonial from '../../assets/bid/colonial.png';
+import costa from '../../assets/bid/costa.png';
+import dup from '../../assets/bid/dup.png';
+import houseboat from '../../assets/bid/houseboat.png';
+import igloo from '../../assets/bid/igloo.png';
+import lake from '../../assets/bid/lake.png';
+import luxury from '../../assets/bid/luxury.png';
+import monaco from '../../assets/bid/monaco.png';
+import news from '../../assets/bid/news.png';
+import pun from '../../assets/bid/pun.png';
+import roof from '../../assets/bid/roof.png';
+import saudi from '../../assets/bid/saudi.png';
+import sky from '../../assets/bid/sky.png';
+import texas from '../../assets/bid/texas.png';
+import town from '../../assets/bid/town.png';
+import villa from '../../assets/bid/villa.png';
+import vin from '../../assets/bid/vin.png';
 
 
 const images = [
   apartment, beach, commercial, con, farm, farmhouse,
   flat, goa, london, office, pent, penthouse,
-  studio, ware, warehouse,condos
+  studio, ware, warehouse,condos,cabin,cave,cliff,colonial,costa,dup,houseboat,igloo,lake,luxury,
+  monaco,news,pun,roof,saudi,sky,texas,town,villa,vin
 ];
 
 const extendedData = data.map((item, i) => ({

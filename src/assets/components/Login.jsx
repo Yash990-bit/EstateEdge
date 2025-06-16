@@ -12,8 +12,6 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-
-
     if (password.length < 8) {
       alert("Password must be at least 8 characters long.");
       return;

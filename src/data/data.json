@@ -29,6 +29,27 @@
     { "id": 27, "item": "Mansion - Los Angeles", "bidder": "Sawagto", "bid": "$12,400,000" },
     { "id": 28, "item": "Flat - Sydney", "bidder": "Priyanshu", "bid": "A$1,600,000" },
     { "id": 29, "item": "Skyscraper Office - Dubai", "bidder": "Harsh", "bid": "د.إ9,000,000" },
-    { "id": 30, "item": "Eco Villa - Bali", "bidder": "Anushka", "bid": "$888,000" }
+    { "id": 30, "item": "Eco Villa - Bali", "bidder": "Anushka", "bid": "$888,000" },
+    
+    { "id": 31, "item": "Penthouse - New York", "bidder": "Riya", "bid": "$7,800,000" },
+    { "id": 32, "item": "Farmhouse - Punjab", "bidder": "Ishaan", "bid": "₹1,200,000" },
+    { "id": 33, "item": "Duplex - Mumbai", "bidder": "Avni", "bid": "₹9,560,000" },
+    { "id": 34, "item": "Cabin - Norway", "bidder": "Reyansh", "bid": "kr5,100,000" },
+    { "id": 35, "item": "Townhouse - Melbourne", "bidder": "Aarav", "bid": "A$2,300,000" },
+    { "id": 36, "item": "Vineyard Estate - Tuscany", "bidder": "Devansh", "bid": "€6,800,000" },
+    { "id": 37, "item": "Cave House - Cappadocia", "bidder": "Myra", "bid": "₺3,200,000" },
+    { "id": 38, "item": "Yacht Home - Monaco", "bidder": "Saanvi", "bid": "€15,000,000" },
+    { "id": 39, "item": "Pagoda Villa - Kyoto", "bidder": "Veer", "bid": "¥140,000,000" },
+    { "id": 40, "item": "Cliff House - Santorini", "bidder": "Riddhi", "bid": "€3,600,000" },
+    { "id": 41, "item": "Suburban Home - Texas", "bidder": "Kabir", "bid": "$920,000" },
+    { "id": 42, "item": "Lake House - Canada", "bidder": "Diya", "bid": "C$1,300,000" },
+    { "id": 43, "item": "Luxury Tent - Kenya", "bidder": "Yuvraj", "bid": "KSh98,000,000" },
+    { "id": 44, "item": "Houseboat - Amsterdam", "bidder": "Shanaya", "bid": "€850,000" },
+    { "id": 45, "item": "Sky Villa - Singapore", "bidder": "Raghav", "bid": "S$4,900,000" },
+    { "id": 46, "item": "Colonial Home - Havana", "bidder": "Aanya", "bid": "$430,000" },
+    { "id": 47, "item": "Desert Villa - Riyadh", "bidder": "Ritik", "bid": "﷼7,500,000" },
+    { "id": 48, "item": "Igloo Suite - Greenland", "bidder": "Meera", "bid": "kr3,000,000" },
+    { "id": 49, "item": "Rooftop Apartment - Seoul", "bidder": "Aryan", "bid": "₩1,800,000,000" },
+    { "id": 50, "item": "Jungle Bungalow - Costa Rica", "bidder": "Tanvi", "bid": "$540,000" }
   ]
   
