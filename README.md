@@ -1,20 +1,106 @@
-# React + Vite
+# 🔥 React + Vite + Firebase (JavaScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project uses **React** with **Vite** for a fast development experience and integrates **Firebase** for backend services like Authentication, Firestore, and Hosting.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React + Vite
+- **Backend:** Firebase
+- **Language:** JavaScript
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-## Ignored Files
+## 🚀 Getting Started
 
-The following files/folders are excluded using `.gitignore` and are not pushed to the repository:
+### 1. Install Dependencies
 
-- `node_modules/` – Dependency folder managed by npm/yarn.
-- `.env.local` – Environment variables for local development.
-- `.next/` – Next.js build output.
+```bash
+npm install
+```
+
+### 2. Run the Dev Server
+
+```bash
+npm run dev
+```
+
+### 3. Build for Production
+
+```bash
+npm run build
+```
+
+### 4. Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🧪 ESLint Setup
+
+Basic ESLint rules are included. You can expand them using:
+
+```bash
+npm install eslint eslint-plugin-react --save-dev
+```
+
+Then create or edit `.eslintrc`:
+
+```json
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  }
+}
+```
+
+---
+
+## 🔐 Firebase Integration
+
+Firebase is used for:
+
+- 🔐 Authentication
+- ☁️ Firestore
+- 🌐 Hosting
+- 📦 Storage (optional)
+
+Create `.env.local` and add your Firebase config:
+
+```env
+VITE_API_KEY=AIzaSyDuAplMDF5yCMsEGkY04bIa8NEogYQ1zjs
+VITE_AUTH_DOMAIN=auction-house-ccf62.firebaseapp.com
+VITE_PROJECT_ID=auction-house-ccf62
+VITE_STORAGE_BUCKET=auction-house-ccf62.appspot.com
+VITE_MESSAGING_SENDER_ID=296018073339
+VITE_APP_ID=1:296018073339:web:3ff13f303b3e45aefd425e
+VITE_MEASUREMENT_ID=G-THN0TL1LN7
+```
+
+Access these in code:
+
+```js
+import.meta.env.VITE_API_KEY;
+```
+
+---
+
+## 📁 .gitignore Contents
+
+```gitignore
+node_modules/
+dist/
+.env.local
+.firebase/
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
