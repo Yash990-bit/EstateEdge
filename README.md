@@ -12,6 +12,15 @@ This project uses **React** with **Vite** for a fast development experience and 
 
 ---
 
+## Link Preview
+--
+
+```
+**[Netlify]([https://benevolent-madeleine-e6ac6d.netlify.app/])
+```
+
+--
+
 ## 🚀 Getting Started
 
 ### 1. Install Dependencies
