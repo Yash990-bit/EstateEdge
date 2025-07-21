@@ -1,11 +1,11 @@
 import React from 'react'
 import "./About.css";
-import Aman from "../client/Aman.png";
-import Ankit from "../client/Ankit.png";
-import Neelanshu from "../client/Neelanshu.png";
-import Shaurya from "../client/Shaurya.png";
-import Kavya from "../client/Kavya.png";
-import Chaitanya from "../client/Chaitanya.png";
+// import Aman from "../client/Aman.png";
+// import Ankit from "../client/Ankit.png";
+// import Neelanshu from "../client/Neelanshu.png";
+// import Shaurya from "../client/Shaurya.png";
+// import Kavya from "../client/Kavya.png";
+// import Chaitanya from "../client/Chaitanya.png";
 import { Link } from 'react-router-dom';
 
 
@@ -73,21 +73,21 @@ function About() {
         <h1 className="client-title">What Our Clients Say</h1>
         <div className="client-cards">
           <div className="client-card">
-          <img src={Aman} alt="Aman Soni" className="client-img" />
+          {/* <img src={Aman} alt="Aman Soni" className="client-img" /> */}
             <p className="client-text">"Auction House made my property selling experience seamless. Highly recommend!"</p>
             <h3 className="client-name">Aman Soni</h3>
             <p className="client-role">Home Seller</p>
           </div>
 
           <div className="client-card">
-          <img src={Ankit} alt="Ankit Pandey" className="client-img" />
+          {/* <img src={Ankit} alt="Ankit Pandey" className="client-img" /> */}
             <p className="client-text">"I found my dream home through Auction House. The process was quick and transparent."</p>
             <h3 className="client-name">Ankit Pandey</h3>
             <p className="client-role">Home Buyer</p>
           </div>
 
           <div className="client-card">
-          <img src={Neelanshu} alt="Neelanshu Karn" className="client-img" />
+          {/* <img src={Neelanshu} alt="Neelanshu Karn" className="client-img" /> */}
             <p className="client-text">"As an investor, I appreciate the verified listings and the ease of bidding."</p>
             <h3 className="client-name">Neelanshu Karn</h3>
             <p className="client-role">Real Estate Investor</p>
@@ -153,28 +153,28 @@ function About() {
         <h2 className="team-title">Meet Our Team</h2>
         <div className="team-cards">
           <div className="team-card">
-            <img src={Yash} alt="" className="team-img"/>
+            {/* <img src={Yash} alt="" className="team-img"/> */}
             <h3 className="team-name">Yash Raghubanshi</h3>
             <p className="team-role">CEO</p>
             <p className="team-quote">"Driven by innovation,committed to trust."</p>
           </div>
         
         <div className="team-card">
-        <img src={Shaurya} alt="" className="team-img"/>
+        {/* <img src={Shaurya} alt="" className="team-img"/> */}
         <h3 className="team-name">Shaurya Sharma</h3>
         <p className="team-role">COO</p>
         <p className="team-quote">"Building bridges between technology and real estate."</p>
         </div>
 
         <div className="team-card">
-        <img src={Kavya} alt="" className="team-img"/>
+        {/* <img src={Kavya} alt="" className="team-img"/> */}
         <h3 className="team-name">Kavya Mukhija</h3>
         <p className="team-role">CTO</p>
         <p className="team-quote">"Passion for code that transforms lives."</p>
         </div>
 
         <div className="team-card">
-        <img src={Chaitanya} alt="" className="team-img"/>
+        {/* <img src={Chaitanya} alt="" className="team-img"/> */}
         <h3 className="team-name">Chaitanya Singh</h3>
         <p className="team-role">CFO</p>
         <p className="team-quote">"Ensuring financial integrity and growth."</p>
