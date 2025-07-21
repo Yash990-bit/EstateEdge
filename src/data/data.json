@@ -1,5 +1,5 @@
 [
-    { "id": 1, "item": "Apartment - London", "bidder": "Anushka", "bid": "$1,350,884" },
+    { "id": 1, "item": "Flat - Mumbai", "bidder": "Aarav", "bid": "₹1,200,000" },
     { "id": 2, "item": "Beach - Goa", "bidder": "Satya", "bid": "₹691,144" },
     { "id": 3, "item": "Commercial Plot - Punjab", "bidder": "Kavya", "bid": "₹2,724,702" },
     { "id": 4, "item": "Con - London", "bidder": "Rudraksh", "bid": "$3,950,883" },
@@ -29,7 +29,7 @@
     { "id": 27, "item": "Mansion - Los Angeles", "bidder": "Sawagto", "bid": "$12,400,000" },
     { "id": 28, "item": "Flat - Sydney", "bidder": "Priyanshu", "bid": "A$1,600,000" },
     { "id": 29, "item": "Skyscraper Office - Dubai", "bidder": "Harsh", "bid": "د.إ9,000,000" },
-    { "id": 30, "item": "Eco Villa - Bali", "bidder": "Anushka", "bid": "$888,000" },
+    { "id": 30, "item": "Loft - Barcelona", "bidder": "Niharika", "bid": "€2,200,000" },
     
     { "id": 31, "item": "Penthouse - New York", "bidder": "Riya", "bid": "$7,800,000" },
     { "id": 32, "item": "Farmhouse - Punjab", "bidder": "Ishaan", "bid": "₹1,200,000" },
