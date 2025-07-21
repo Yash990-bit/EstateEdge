@@ -3,7 +3,6 @@ import "./About.css";
 import Aman from "../client/Aman.png";
 import Ankit from "../client/Ankit.png";
 import Neelanshu from "../client/Neelanshu.png";
-import Yash from "../client/Yash.png";
 import Shaurya from "../client/Shaurya.png";
 import Kavya from "../client/Kavya.png";
 import Chaitanya from "../client/Chaitanya.png";
