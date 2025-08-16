@@ -79,25 +79,6 @@ Firebase is used for:
 - 🌐 Hosting
 - 📦 Storage (optional)
 
-Create `.env.local` and add your Firebase config:
-
-```env
-VITE_API_KEY=AIzaSyDuAplMDF5yCMsEGkY04bIa8NEogYQ1zjs
-VITE_AUTH_DOMAIN=auction-house-ccf62.firebaseapp.com
-VITE_PROJECT_ID=auction-house-ccf62
-VITE_STORAGE_BUCKET=auction-house-ccf62.appspot.com
-VITE_MESSAGING_SENDER_ID=296018073339
-VITE_APP_ID=1:296018073339:web:3ff13f303b3e45aefd425e
-VITE_MEASUREMENT_ID=G-THN0TL1LN7
-```
-
-Access these in code:
-
-```js
-import.meta.env.VITE_API_KEY;
-```
-
----
 
 ## 📁 .gitignore Contents
 
