@@ -1,10 +1,10 @@
-# 🔥 React + Vite + Firebase (JavaScript)
+#  React + Vite + Firebase (JavaScript)
 
 This project uses **React** with **Vite** for a fast development experience and integrates **Firebase** for backend services like Authentication, Firestore, and Hosting.
 
 ---
 
-## 📦 Tech Stack
+##  Tech Stack
 
 - **Frontend:** React + Vite
 - **Backend:** Firebase
@@ -21,7 +21,7 @@ This project uses **React** with **Vite** for a fast development experience and 
 
 --
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Install Dependencies
 
@@ -47,7 +47,7 @@ npm run build
 npm run preview
 ```
 
-## 🧪 ESLint Setup
+##  ESLint Setup
 
 Basic ESLint rules are included. You can expand them using:
 
@@ -70,17 +70,17 @@ Then create or edit `.eslintrc`:
 
 ---
 
-## 🔐 Firebase Integration
+##  Firebase Integration
 
 Firebase is used for:
 
-- 🔐 Authentication
-- ☁️ Firestore
-- 🌐 Hosting
-- 📦 Storage (optional)
+-  Authentication
+-  Firestore
+- Hosting
+- Storage (optional)
 
 
-## 📁 .gitignore Contents
+##  .gitignore Contents
 
 ```gitignore
 node_modules/
@@ -91,6 +91,6 @@ dist/
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
