@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Chaitanya from "../assets/images/Chaitanya.png";
 import Rudraksh from "../assets/images/Rudraksh.png";
 import Shaurya from "../assets/images/Shaurya.png";
@@ -7,73 +7,67 @@ import Mayank from "../assets/images/Mayank.png";
 import "../App.css";
 
 function Customer() {
-  const scrollRef = useRef(null);
+  const testimonials = [
+    {
+      id: 1,
+      name: "Chaitanya Singh",
+      image: Chaitanya,
+      text: "\"Thank you Auction House! I found my dream home in record time.\""
+    },
+    {
+      id: 2,
+      name: "Rudraksh Sharma",
+      image: Rudraksh,
+      text: "\"I came to know about Auction House and it changed my property game.\""
+    },
+    {
+      id: 3,
+      name: "Shaurya Sharma",
+      image: Shaurya,
+      text: "\"I could schedule viewings instantly. seamless experience!\""
+    },
+    {
+      id: 4,
+      name: "Anshuman Mehta",
+      image: Anshuman,
+      text: "\"Great platform! Sold my property within a week.\""
+    },
+    {
+      id: 5,
+      name: "Mayank Sharma",
+      image: Mayank,
+      text: "\"Highly recommended for anyone looking to buy or sell quickly.\""
+    }
+  ];
 
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
+  return (
+    <div className="Customer-section">
+      <h2>Hear From <span>Our Happy Customers</span></h2>
+      <p>Real stories from users who've transformed their lives with our services.</p>
 
-    let scrollAmount = 0;
-
-    const scroll = () => {
-      if (!scrollContainer) return;
-
-      scrollAmount += 1;
-      scrollContainer.scrollLeft = scrollAmount;
-
-      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-        scrollAmount = 0; 
-      }
-
-      requestAnimationFrame(scroll);
-    };
-    const duplicateContent = () => {
-      const content = scrollContainer.innerHTML;
-      scrollContainer.innerHTML += content;
-    };
-
-    duplicateContent();
-    scroll();
-
-  }, []);
-
-  
-    return (
-      <>
-  
-        <div className="Customer-section">
-          <h2>Hear From <span>Our Happy Customer</span></h2>
-          <p>Real stories from users who've transformed their lives with our services.</p>
-  
-          <div className="testimonial-carousel" ref={scrollRef}>
-            <div className="testimonial-card">
-              <img src={Chaitanya} alt="chaitanya" />
-              <p>"Thank you Auction House..."</p>
-              <h4>Chaitanya Singh</h4>
+      <div className="carousel-container">
+        <div className="carousel-track">
+          {/* Original List */}
+          {testimonials.map((item) => (
+            <div className="testimonial-card" key={item.id}>
+              <img src={item.image} alt={item.name} />
+              <p>{item.text}</p>
+              <h4>{item.name}</h4>
             </div>
-            <div className="testimonial-card">
-              <img src={Rudraksh} alt="rudraksh" />
-              <p>"I came to know about Auction House..."</p>
-              <h4>Rudraksh Sharma</h4>
+          ))}
+
+          {/* Duplicated List for Infinite Scroll */}
+          {testimonials.map((item) => (
+            <div className="testimonial-card" key={`dup-${item.id}`}>
+              <img src={item.image} alt={item.name} />
+              <p>{item.text}</p>
+              <h4>{item.name}</h4>
             </div>
-            <div className="testimonial-card">
-              <img src={Shaurya} alt="shaurya" />
-              <p>"I could schedule viewings..."</p>
-              <h4>Shaurya Sharma</h4>
-            </div>
-            <div className="testimonial-card">
-              <img src={Anshuman} alt="anshuman" />
-              <p>"Great platform!..."</p>
-              <h4>Anshuman Mehta</h4>
-            </div>
-            <div className="testimonial-card">
-              <img src={Mayank} alt="mayank" />
-              <p>"Great platform!..."</p>
-              <h4>Mayank Sharma</h4>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
+    </div>
+  );
+}
 
-      </>
-    );
-  }
-  export default Customer;
+export default Customer;

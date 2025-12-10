@@ -1,151 +1,161 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: #fff;
-  color: #000;
-  overflow-x:hidden;
-}
-
+/* Hero Section */
 .banner-container {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 85vh;
+  /* Increased height for impact */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  /* Establish stacking context */
 }
 
 .banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  filter: brightness(0.7);
+  /* Darken bg for text contrast */
+  z-index: -1;
+  /* Behind content */
 }
 
 .banner-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  z-index: 1;
-  width: 80%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  animation: slideUp 0.8s ease-out;
 }
 
 .banner-heading {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 30px;
+  font-size: 3.5rem;
+  /* Slightly reduced for better mobile fit */
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .banner-heading span {
-  color: #0044ff;
+  background: linear-gradient(120deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.banner-text p{
-  font-size: 10rem;
+.banner-text {
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: #ba3232;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.banner-text span {
-  color: #0044ff;
-} 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Feature Sections (Off, Become, Globe) */
 .off,
 .become-section,
 .globe-section {
   display: flex;
+  flex-direction: row;
+  /* Force standard row direction */
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 60px 40px;
-  justify-content: space-between;
-  background-color: #8faae2;
+  /* Allow wrapping on small screens */
+  align-items: center;
+  gap: 50px;
+  padding: 80px 5%;
+  background: transparent;
+}
+
+/* Glass Cards for Text Content */
+.off-text,
+.become,
+.global {
+  flex: 1 1 400px;
+  /* Basis of 400px, grow and shrink */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }
 
 .off-video,
 .become-image,
 .globe-image {
-  flex: 1 1 45%;
+  flex: 1 1 400px;
+  /* Basis of 400px */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  background: white;
+  /* Fallback */
 }
 
-.off-video video {
+/* Image/Video Sizing - CRITICAL FIX */
+.off-video video,
+.become-image img,
+.globe-image img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: auto;
+  /* Allow natural height to prevent collapse */
+  min-height: 300px;
+  /* Ensure visibility even if loading/issue */
+  object-fit: cover;
+  display: block;
 }
 
-.off-video video:hover {
-  transform: scale(1.05);
-}
-
-.off-video video {
-  transition: transform 0.3s ease;
-}
-
-.off-text,
-.become,
-.global {
-  flex: 1 1 50%;
-}
-
+/* Typography in Sections */
 .off-text h2,
 .become h2,
 .global h2 {
-  font-size: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: var(--text-dark);
 }
 
 .off-text h2 span,
 .become h2 span,
 .global h2 span {
-  color: #0044ff;
+  color: var(--primary-color);
 }
 
 .off-text p,
 .become p,
 .global p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #171616;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
 }
 
-.become-image img,
-.globe-image img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
+/* Partner Logos */
+.head {
+  text-align: center;
+  margin: 80px 0 40px;
 }
 
-.become-image:hover img {
-  transform: scale(1.05);
-}
-
-.become-image img {
-  transition: transform 0.3s ease;
-}
-
-.globe-image:hover img {
-  transform: scale(1.05);
-}
-
-.globe-image img{
-  transition: transform 0.3s ease;
-}
-
-.globe-image {
-  margin-left: 0; 
+.head h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .Image-section,
@@ -153,130 +163,193 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  padding: 40px 0;
+  gap: 50px;
+  padding: 20px 5%;
   flex-wrap: wrap;
 }
 
 .Image-section img,
 .Img-section img {
-  max-height: 60px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+  height: 45px;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .Image-section img:hover,
 .Img-section img:hover {
+  filter: grayscale(0%) opacity(1);
   transform: scale(1.1);
 }
 
-.head {
-  text-align: center;
-  margin: 20px 0;
-}
+/* Responsive */
+@media (max-width: 900px) {
+  .banner-heading {
+    font-size: 2.5rem;
+  }
 
-.head h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.head h2 span {
-  color: #0044ff;
-}
-
-.Customer-section {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-
-.Customer-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #171616;
-  margin-bottom: 20px;
-}
-
-.Customer-section h2 span {
-  color: #0044ff;
-}
-
-.testimonial-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 20px;
-  padding: 20px 0;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
-.testimonial-carousel:hover {
-  scrollbar-width: thin;
-  cursor: pointer;
-}
-
-.testimonial-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.testimonial-card {
-  flex: 0 0 80%;
-  max-width: 500px;
-  scroll-snap-align: center;
-  background-color: #f7f7f7;
-  padding: 20px;
-  margin: 0 auto;
-  border-radius: 12px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.testimonial-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.testimonial-card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.testimonial-card h4 {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
-}
-
-@media (max-width: 768px) {
   .off,
   .become-section,
   .globe-section {
     flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .Image-section,
-  .Img-section {
+    /* Stack vertically on mobile */
     gap: 30px;
+    padding: 60px 4%;
   }
 
-  .banner-heading {
-    font-size: 2rem;
-  }
+  /* Ensure text appears before image on mobile if desired, or after */
+  /* Default is content order. */
 
-  .search-box input,
-  .search-box select {
-    min-width: 200px;
-  }
-
+  .off-text,
+  .become,
+  .global,
+  .off-video,
+  .become-image,
   .globe-image {
-    margin-left: 0;
+    width: 100%;
+    flex: auto;
   }
+}
+
+/* Customer / Testimonial Section */
+.Customer-section {
+  text-align: center;
+  padding: 80px 0;
+  /* Full breadth */
+  background: transparent;
+  overflow: hidden;
+}
+
+.Customer-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.Customer-section h2 span {
+  color: var(--primary-color);
+}
+
+.Customer-section p {
+  color: #64748b;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+/* Infinite Marquee Container */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Fade mask on sides */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollMarquee 30s linear infinite;
+  padding: 20px 0;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+  /* -50% works because we duplicated the list once. Total width = 2x list. */
+}
+
+/* Individual Card */
+.testimonial-card {
+  width: 350px;
+  /* Fixed width */
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--primary-color);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #475569;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.testimonial-card h4 {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Dark Mode Support */
+body.dark-theme .off-text,
+body.dark-theme .become,
+body.dark-theme .global,
+body.dark-theme .testimonial-card {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .testimonial-card:hover {
+  background: rgba(30, 41, 59, 0.9);
+}
+
+body.dark-theme .off-text h2,
+body.dark-theme .become h2,
+body.dark-theme .global h2,
+body.dark-theme .head h2,
+body.dark-theme .Customer-section h2,
+body.dark-theme .testimonial-card h4 {
+  color: var(--text-light);
+}
+
+body.dark-theme .off-text p,
+body.dark-theme .become p,
+body.dark-theme .global p,
+body.dark-theme .Customer-section p,
+body.dark-theme .testimonial-card p {
+  color: #94a3b8;
+}
+
+body.dark-theme .Image-section img,
+body.dark-theme .Img-section img {
+  filter: brightness(0) invert(1) opacity(0.7);
+}
+
+body.dark-theme .Image-section img:hover,
+body.dark-theme .Img-section img:hover {
+  filter: none;
 }

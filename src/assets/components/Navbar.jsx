@@ -6,15 +6,6 @@ import "./Navbar.css";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    document.body.className = isDark ? "dark-theme" : "light-theme";
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    setIsDark(prev => !prev);
-  };
 
   return (
     <nav className="navbar">
@@ -28,17 +19,13 @@ const Navbar = () => {
           <a href="/sell">Sell Property</a>
           <a href="/contact">Contact</a>
 
-        
+
 
           <div className="auth-buttons">
-            <button className="login-btn" onClick={()=>navigate("/login")}>Login</button>
-            <button className="signup-btn" onClick={()=>navigate("/signup")}>Sign Up</button>
+            <button className="login-btn" onClick={() => navigate("/login")}>Login</button>
+            <button className="signup-btn" onClick={() => navigate("/signup")}>Sign Up</button>
           </div>
         </div>
-
-        <button className="theme-toggle" onClick={toggleTheme}>
-          {isDark ? "☀️ Light" : "🌙 Dark"}
-        </button>
 
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="bar"></div>

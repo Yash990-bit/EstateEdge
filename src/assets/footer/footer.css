@@ -17,10 +17,10 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 10px;
-  color:#1a4ed8;
+  color: #1a4ed8;
 }
 
-.world-house span{
+.world-house span {
   color: #637bd2;
 }
 
@@ -79,7 +79,7 @@
 
 .world-list li a:hover {
   color: #f1f5f9;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .world-copyright {

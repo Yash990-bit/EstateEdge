@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { sendPasswordResetEmail} from "firebase/auth";
+import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "./firebase";
-import "./ForgotPassword.css"; 
+import "./ForgotPassword.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -17,19 +17,34 @@ const ForgotPassword = () => {
   };
 
   return (
-    <form className="forgot-password-form" onSubmit={handleReset}>
-      <h2>Reset Password</h2>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <button type="submit">Send Reset Email</button>
+    <div className="auth-wrapper">
+      <div className="auth-container">
+        <a href="/login" className="back-link">← Back to Login</a>
 
-      
-    </form>
+        <div className="auth-header">
+          <h2>Reset Password</h2>
+          <p>Enter your email to receive reset instructions</p>
+        </div>
+
+        <form className="auth-form" onSubmit={handleReset}>
+          <div className="input-group">
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <button type="submit" className="submit-btn" style={{ marginTop: '10px' }}>
+            Send Reset Email
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 

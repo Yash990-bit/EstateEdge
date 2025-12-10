@@ -1,148 +1,310 @@
-.signup-form {
-  width: 50%;
-  top: 10%;
-  left: 25%;
-  position: absolute;
-  margin: 80px auto;
-  padding: 32px;
-  background-color: #8faae2; /* Light mode */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #000;
-}
+/* Reuse the same glassmorphism styles from Login.css */
+/* Ideally, this should be in a shared Auth.css, but keeping files separate as per structure */
 
-body.dark-theme .signup-form {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
-
-.signup-form h2 {
-  text-align: center;
-  margin-bottom: 24px;
-  color: #1a4ed8;
-}
-
-body.dark-theme .signup-form h2 {
-  color: #88aaff;
-}
-
-.signup-form input {
+.auth-wrapper {
+  min-height: 100vh;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  outline: none;
-  background-color: #ffffff;
-  color: #000;
-  transition: border-color 0.2s, background-color 0.2s;
-}
-
-.signup-form input:focus {
-  border-color: #1a4ed8;
-}
-
-body.dark-theme .signup-form input {
-  background-color: #2c2c2c;
-  border: 1px solid #444;
-  color: #f0f0f0;
-}
-
-.password-container {
-  position: relative;
-}
-
-.toggle-password {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #1a4ed8;
-}
-
-body.dark-theme .toggle-password {
-  color: #88aaff;
-}
-
-.signup-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #1a4ed8;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.signup-form button:hover {
-  background-color: #153bbf;
-}
-
-.signup-form button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-  color: #666;
-}
-
-.auth-links {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.auth-links a {
-  color: #1a4ed8;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.auth-links a:hover {
-  text-decoration: underline;
-  color:#003acb;
-}
-
-body.dark-theme .auth-links a {
-  color: #88aaff;
-}
-
-.error-message {
-  color: #ff3333;
-  margin-bottom: 10px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.google-icon-button {
-  width: 48px;
-  height: 48px;
-  border: none;
-  border-radius: 50%;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 16px auto 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.auth-wrapper::before,
+.auth-wrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.auth-wrapper::before {
+  width: 400px;
+  height: 400px;
+  background: rgba(26, 78, 216, 0.4);
+  top: -50px;
+  left: -50px;
+}
+
+.auth-wrapper::after {
+  width: 300px;
+  height: 300px;
+  background: rgba(136, 170, 255, 0.4);
+  bottom: -50px;
+  right: -50px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-link {
+  display: inline-block;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #1a4ed8;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.auth-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  background: #fff;
+  border-color: #1a4ed8;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(26, 78, 216, 0.1);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
-  padding: 0;
+  padding: 4px;
 }
 
-.google-icon-button:hover {
-  color: #003acb;
+.toggle-password-btn:hover {
+  color: #1a4ed8;
 }
 
-.google-icon-button:disabled {
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #1a4ed8 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #475569;
+  font-weight: 500;
+}
+
+.google-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.google-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.google-logo-circle {
-  width: 24px;
-  height: 24px;
-  border-radius: 5%;         
-  object-fit: cover;
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.auth-footer a {
+  color: #1a4ed8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.auth-footer a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #ef4444;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  border: 1px solid #fee2e2;
+}
+
+/* Dark Mode Support */
+body.dark-theme .auth-wrapper {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-theme .auth-wrapper::before {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+body.dark-theme .auth-wrapper::after {
+  background: rgba(129, 140, 248, 0.15);
+}
+
+body.dark-theme .auth-container {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .auth-header h2 {
+  color: #f1f5f9;
+}
+
+body.dark-theme .auth-header p,
+body.dark-theme .input-group label,
+body.dark-theme .back-link,
+body.dark-theme .auth-footer {
+  color: #94a3b8;
+}
+
+body.dark-theme .auth-form input {
+  background: rgba(15, 23, 42, 0.6);
+  color: #f1f5f9;
+  border-color: transparent;
+}
+
+body.dark-theme .auth-form input:focus {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+}
+
+body.dark-theme .google-btn {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+body.dark-theme .google-btn:hover {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+body.dark-theme .submit-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
 }

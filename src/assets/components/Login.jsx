@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword ,GoogleAuthProvider, signInWithPopup,} from "firebase/auth";
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, } from "firebase/auth";
 import { auth } from "./firebase";
 import "./Login.css";
 import GoogleLogo from "../images/google.png";
@@ -40,42 +40,74 @@ const Login = () => {
   };
 
   return (
-    <form className="login-form" onSubmit={handleLogin}>
-      <h2>Login</h2>
+    <div className="auth-wrapper">
+      <div className="auth-container">
+        <a href="/" className="back-link">← Back to Home</a>
 
-      <input
-        type="email"
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
+        <div className="auth-header">
+          <h2>Welcome Back</h2>
+          <p>Please enter your details to sign in</p>
+        </div>
 
-      <div className="password-container">
-        <input
-          type={showPassword ? "text" : "password"}
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <span
-          className="toggle-password"
-          onClick={togglePasswordVisibility}
-        >
-        </span>
+        <form className="auth-form" onSubmit={handleLogin}>
+          <div className="input-group">
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <div className="password-wrapper">
+              <input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <button
+                type="button"
+                className="toggle-password-btn"
+                onClick={togglePasswordVisibility}
+                aria-label="Toggle password visibility"
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" className="submit-btn" disabled={false}>
+            Sign In
+          </button>
+
+          <div className="divider">
+            <span>or continue with</span>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            className="google-btn"
+          >
+            <img src={GoogleLogo} alt="" />
+            <span>Sign in with Google</span>
+          </button>
+
+          <div className="auth-footer">
+            <a href="/forgot-password">Forgot Password?</a>
+            <p>
+              Don't have an account? <a href="/signup">Sign up</a>
+            </p>
+          </div>
+        </form>
       </div>
-
-      <button type="submit">Login</button>
-
-      <button type="button" onClick={handleGoogleLogin} className="google-icon-button">
-        <img src={GoogleLogo} alt="Google login" className="google-logo-circle" />
-      </button>
-      
-      <div className="auth-links">
-        <a href="/forgot-password" className="forgot-password">
-          Forgot Password?
-        </a>
-      </div>
-    </form>
+    </div>
   );
 };
 
