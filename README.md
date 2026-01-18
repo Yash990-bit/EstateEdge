@@ -1,4 +1,4 @@
-#  React + Vite + Firebase (JavaScript)
+#  EstateEdge
 
 This project uses **React** with **Vite** for a fast development experience and integrates **Firebase** for backend services like Authentication, Firestore, and Hosting.
 
@@ -20,6 +20,17 @@ This project uses **React** with **Vite** for a fast development experience and 
 ```
 
 --
+
+## ScreenShots
+
+---
+```
+**[SignUp](public/screen1.png)
+**[Home](public/screen2.png)
+**[Auction](public/screen3.png)
+
+```
+---
 
 ##  Getting Started
 
