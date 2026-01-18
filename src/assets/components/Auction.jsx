@@ -14,7 +14,7 @@ import farmhouse from '../../assets/bid/farmhouse.png';
 import flat from '../../assets/bid/flat.png';
 import goa from '../../assets/bid/goa.png';
 import london from '../../assets/bid/london.png';
-import office from '../../assets/bid/office space.png';
+import office from '../../assets/bid/space.png';
 import pent from '../../assets/bid/pent.png';
 import penthouse from '../../assets/bid/penthouse.png';
 import studio from '../../assets/bid/studio.png';
