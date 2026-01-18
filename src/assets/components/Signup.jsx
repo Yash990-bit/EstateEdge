@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "./firebase";
 import "./Signup.css";
-import Google from "../images/google.png";
+import google from "../images/Google.png";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -110,7 +110,7 @@ const Signup = () => {
             disabled={loading}
             className="google-btn"
           >
-            <img src={Google} alt="" />
+            <img src={google} alt="" />
             <span>Sign up with Google</span>
           </button>
 
