@@ -20,16 +20,6 @@ This project uses **React** with **Vite** for a fast development experience and 
 ```
 
 --
-## Screenshots
-
-### SignUp
-![SignUp](../assets/images/screen1.png)          
-
-### Home
-![Home](../assets/images/screen2.png)
-
-### Auction
-![Auction](../assets/images/screen3.png)
 
 ##  Getting Started
 
