@@ -42,12 +42,12 @@ function Contact() {
         <form className="contact-form" onSubmit={onSubmit}>
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
-            <input type="text" id="name" name="name" required placeholder="John Doe" />
+            <input type="text" id="name" name="name" required placeholder="Full Name" />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="john@example.com" />
+            <input type="email" id="email" name="email" required placeholder="email address" />
           </div>
 
           <div className="form-group">
@@ -70,9 +70,9 @@ function Contact() {
         <div className="social-links-footer">
           <p>Connect with us:</p>
           <div className="social-icons-row">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="s-icon insta">📸</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="s-icon gh">🐙</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="s-icon li">💼</a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="s-icon insta">💬</a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="s-icon gh">💻</a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="s-icon li">🧑‍💼</a>
             <a href="tel:+1234567890" className="s-icon ph">📞</a>
           </div>
         </div>
