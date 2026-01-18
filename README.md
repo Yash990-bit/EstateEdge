@@ -20,17 +20,17 @@ This project uses **React** with **Vite** for a fast development experience and 
 ```
 
 --
+## Screenshots
 
-## ScreenShots
+### SignUp
+![SignUp](public/screen1.png)
 
----
-```
-**[SignUp](public/screen1.png)
-**[Home](public/screen2.png)
-**[Auction](public/screen3.png)
+### Home
+![Home](public/screen2.png)
 
-```
----
+### Auction
+![Auction](public/screen3.png)
+
 
 ##  Getting Started
 
