@@ -23,13 +23,13 @@ This project uses **React** with **Vite** for a fast development experience and 
 ## Screenshots
 
 ### SignUp
-![SignUp](/screen1.png)
+![SignUp](../assets/images/screen1.png)          
 
 ### Home
-![Home](/screen2.png)
+![Home](../assets/images/screen2.png)
 
 ### Auction
-![Auction](/screen3.png)
+![Auction](../assets/images/screen3.png)
 
 ##  Getting Started
 
