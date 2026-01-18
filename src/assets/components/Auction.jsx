@@ -30,7 +30,7 @@ import dup from '../../assets/bid/dup.png';
 import houseboat from '../../assets/bid/houseboat.png';
 import igloo from '../../assets/bid/igloo.png';
 import lake from '../../assets/bid/lake.png';
-import luxury from '../../assets/bid/luxury.png';
+import axis from '../../assets/bid/axis.png';
 import monaco from '../../assets/bid/monaco.png';
 import news from '../../assets/bid/news.png';
 import pun from '../../assets/bid/pun.png';
@@ -46,7 +46,7 @@ import vin from '../../assets/bid/vin.png';
 const images = [
   apartment, beach, commercial, con, farm, farmhouse,
   flat, goa, london, office, pent, penthouse,
-  studio, ware, warehouse,condos,cabin,cave,cliff,colonial,costa,dup,houseboat,igloo,lake,luxury,
+  studio, ware, warehouse,condos,cabin,cave,cliff,colonial,costa,dup,houseboat,igloo,lake,axis,
   monaco,news,pun,roof,saudi,sky,texas,town,villa,vin
 ];
 
