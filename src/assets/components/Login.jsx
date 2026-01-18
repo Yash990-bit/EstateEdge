@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, } from "firebase/auth";
 import { auth } from "./firebase";
 import "./Login.css";
-import GoogleLogo from "../images/google.png";
+import GoogleLogo from "../images/Google.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
